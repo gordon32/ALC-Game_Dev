@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 9120914975835919474}
   - component: {fileID: 9120914977527005436}
   - component: {fileID: -2588893811191121938}
+<<<<<<< HEAD
   - component: {fileID: 7921061704578591248}
   - component: {fileID: 6105575244396226705}
   - component: {fileID: -8043179208727100614}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: Animal_Stag_01
   m_TagString: Untagged
@@ -92,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   lowerBounds: -10
+<<<<<<< HEAD
 --- !u!65 &7921061704578591248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac41d080f7d5b4041a4f11eed79ec640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> master
 --- !u!1 &9120914975843280962
 GameObject:
   m_ObjectHideFlags: 0

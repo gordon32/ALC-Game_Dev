@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 1837856244146022674}
   - component: {fileID: 1837856244995492091}
   - component: {fileID: 8873931581505389637}
+<<<<<<< HEAD
   - component: {fileID: -6876977890888753631}
   - component: {fileID: 5260755190467876318}
   - component: {fileID: 4372207670060983815}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: Food_Organic_Pear_02 (1)
   m_TagString: Untagged
@@ -109,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topBound: 30
+<<<<<<< HEAD
   lowerBounds: -10
 --- !u!65 &-6876977890888753631
 BoxCollider:
@@ -151,3 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac41d080f7d5b4041a4f11eed79ec640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> master

@@ -138,9 +138,12 @@ GameObject:
   - component: {fileID: 7510732727472703407}
   - component: {fileID: 7510732728374482256}
   - component: {fileID: -6818128741551737167}
+<<<<<<< HEAD
   - component: {fileID: -2445462393755706093}
   - component: {fileID: -7595121304725167586}
   - component: {fileID: -1141409820842650150}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: Animal_Horse_Black
   m_TagString: Untagged
@@ -214,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   lowerBounds: -10
+<<<<<<< HEAD
 --- !u!65 &-2445462393755706093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -255,6 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac41d080f7d5b4041a4f11eed79ec640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> master
 --- !u!1 &7510732727465358669
 GameObject:
   m_ObjectHideFlags: 0
