@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerX : MonoBehaviour
 {
+    public GameObject dogPrefab;
+
     public float horizontalInput;
     public float speed = 25.0f;
     public float xRange = 23.0f;
@@ -41,4 +43,3 @@ public class PlayerController : MonoBehaviour
 
     }
 }
-
