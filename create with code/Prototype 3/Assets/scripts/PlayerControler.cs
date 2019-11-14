@@ -8,7 +8,7 @@ public class PlayerControler : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isOnground = true;
-    private bool gameOver;
+    public bool gameOver = false;
     
 
     // Start is called before the first frame update
