@@ -12,6 +12,9 @@ public class PlayerControler : MonoBehaviour
     private Animator playerAnim;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
+    private AudioSource playerAudio;
 
 
 
@@ -21,6 +24,7 @@ public class PlayerControler : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravityModifier;
+        playerAudio = GetComponent < AudioSource >();
         
     }
 
@@ -30,9 +34,10 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isOnground && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnground = true;
+            isOnground = false;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }
 
@@ -51,6 +56,7 @@ public class PlayerControler : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
             dirtParticle.Stop();
+            playerAudio.PlayOneShot(crashSound, 1.0f);
         }
     }
 }
