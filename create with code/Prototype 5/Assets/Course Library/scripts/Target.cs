@@ -14,6 +14,7 @@ public class Target: MonoBehaviour
     {
         Destroy(gameObject);
     }
+    private ThingManager thingManager;
 
 
     private void OnTriggerEnter(Collider other)
@@ -30,11 +31,18 @@ public class Target: MonoBehaviour
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPos();
+        thingManager = GameObject.Find("ThingManager").GetComponent<ThingManager>();
     }
     Vector3 RandomForce() { return Vector3.up * Random.Range(minSpeed, maxSpeed); }
     float RandomTorque() { return Random.Range(-maxTorque, maxTorque); }
     Vector3 RandomSpawnPos() { return new Vector3(Random.Range(-xRange, xRange), ySpawnPos); }
     
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+        thingManager.UpdateScore(5);
+    }
 
     // Update is called once per frame
     void Update()
