@@ -14,11 +14,15 @@ public class Target: MonoBehaviour
     public ParticleSystem explosionParticle;
     private void OnMouseDown()
     {
-        Destroy(gameObject);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-        thingManager.UpdateScore(pointValue);
+        if (thingManager.isGameActive)
+        {
+            Destroy(gameObject);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            thingManager.UpdateScore(pointValue);
+        }
     }
     private ThingManager thingManager;
+    
 
 
     private void OnTriggerEnter(Collider other)
@@ -41,6 +45,7 @@ public class Target: MonoBehaviour
 
         transform.position = RandomSpawnPos();
         thingManager = GameObject.Find("ThingManager").GetComponent<ThingManager>();
+        
     }
     Vector3 RandomForce() { return Vector3.up * Random.Range(minSpeed, maxSpeed); }
     float RandomTorque() { return Random.Range(-maxTorque, maxTorque); }
